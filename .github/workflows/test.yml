@@ -1,6 +1,7 @@
 name: Test CI
 on:
-  push: ["main"]
+  push:
+    branches: ["main"]
 
 jobs:
   ci:
