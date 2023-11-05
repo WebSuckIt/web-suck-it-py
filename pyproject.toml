@@ -1,0 +1,47 @@
+[tool.poetry]
+name = "web-suck-it-py"
+version = "0.0.0"
+description = "Python SDK for WebSuckIt integration"
+authors = ["Diretnan Domnan <diretnandomnan@gmail.com>"]
+readme = "README.md"
+packages = [
+  {include = "web_suck_it_py"}
+]
+license = "MIT"
+homepage = "https://websuckit.com"
+repository = "https://github.com/WebSuckIt/web-suck-it-py"
+classifiers = [
+  "Topic :: Communications",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3.11"
+]
+keywords = [
+  "websocket", 
+  "communication", 
+  "http",
+  "websuckit", 
+  "realtime"
+]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+uuid = "^1.30"
+pycryptodome = "^3.19.0"
+requests = "^2.31.0"
+
+[tool.mypy]
+mypy_path = "web_suck_it_py/stubs/web_suck_it_py"
+enable_incomplete_feature = [ "Unpack" ]
+explicit_package_bases = true
+
+
+[tool.poetry.group.dev.dependencies]
+websocket = "^0.2.1"
+pytest = "^7.4.3"
+flake8 = "^6.1.0"
+mypy = "^1.6.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
