@@ -19,7 +19,7 @@ install: ## Install poetry packages and mypy missing types
 	@echo "\n=== Installing packages ================================="
 	@poetry install
 	@echo "\n=== Installing stub packages ================================="
-	@poetry run mypy --install-types --non-interactive
+	@poetry run python3 -m pip install types-requests
 
 stubgen: ## Generate typing stubfiles
 	@echo "\n=== Generating Stubs =================================="
