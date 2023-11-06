@@ -30,7 +30,7 @@ check: ## Check codebase against some standards
 	@poetry run flake8 . --ignore=E203,E266,E501,W503,W505 --max-line-length=88 \
 		--exclude tests/,web_suck_it_py/__init__.py,.venv
 	@echo "\n=== Mypy =================================="
-	poetry run mypy web_suck_it_py
+	@poetry run mypy web_suck_it_py
 	@echo ""
 
 publish:
