@@ -8,4 +8,6 @@ class Channel:
     user_id: UUID
     created_at: str
     updated_at: str
-    def __init__(self, id, name, pass_key, max_connections, user_id, created_at, updated_at) -> None: ...
+    def __init__(
+        self, id, name, pass_key, max_connections, user_id, created_at, updated_at
+    ) -> None: ...

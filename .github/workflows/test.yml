@@ -33,3 +33,7 @@ jobs:
         run: make check
       - name: Run test
         run: make test
+        env:
+          ACCESS_KEY: ${{ secrets.ACCESS_KEY }}
+          USER_ID: ${{ secrets.USER_ID }}
+          PUBLIC_KEY: ${{ secrets.PUBLIC_KEY }}

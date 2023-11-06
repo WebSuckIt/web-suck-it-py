@@ -3,7 +3,6 @@ from http import HTTPMethod
 from typing import Any, List
 
 from web_suck_it_py.base import Base
-
 from web_suck_it_py.request import (
     CreateChannelRequest,
     DeleteChannelRequest,

@@ -24,7 +24,9 @@ class UpdateChannelRequest(DeleteChannelRequest):
     regenerate_pass_key: bool
     channel: str | None
     max_connections: int | None
-    def __init__(self, channel_id, regenerate_pass_key, channel, max_connections) -> None: ...
+    def __init__(
+        self, channel_id, regenerate_pass_key, channel, max_connections
+    ) -> None: ...
 
 class GetChannelListRequest(WebSuckItRequest):
     page: int

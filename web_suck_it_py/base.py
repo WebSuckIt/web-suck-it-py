@@ -9,6 +9,7 @@ import requests
 from Crypto.Cipher import PKCS1_OAEP
 from Crypto.Hash import SHA256
 from Crypto.PublicKey import RSA
+
 from web_suck_it_py.error import InitializationError
 
 

@@ -13,7 +13,7 @@ format: ## Format the code
 	@echo ""
 
 test: ## Poetry run tests
-	poetry run pytest -x tests
+	poetry run pytest -v tests
 
 install: ## Install poetry packages and mypy missing types
 	@echo "\n=== Installing packages ================================="
@@ -28,11 +28,14 @@ stubgen: ## Generate typing stubfiles
 check: ## Check codebase against some standards
 	@echo "\n=== Flake8 Checks =================================="
 	@poetry run flake8 . --ignore=E203,E266,E501,W503,W505 --max-line-length=88 \
-		--exclude tests/conftest.py,web_suck_it_py/__init__.py,.venv
+		--exclude tests/,web_suck_it_py/__init__.py,.venv
 	@echo "\n=== Mypy =================================="
-	poetry run mypy web_suck_it_py tests
+	poetry run mypy web_suck_it_py
 	@echo ""
 
+publish:
+	@echo "\n=== Build and Publish =================================="
+	@poetry build && poetry publish
 
 # --------------Configuration-------------
 #  #

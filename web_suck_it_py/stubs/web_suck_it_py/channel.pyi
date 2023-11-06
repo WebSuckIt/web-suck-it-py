@@ -1,6 +1,14 @@
 from typing import List
+
 from web_suck_it_py.base import Base as Base
-from web_suck_it_py.request import CreateChannelRequest as CreateChannelRequest, DeleteChannelRequest as DeleteChannelRequest, GetChannelListRequest as GetChannelListRequest, GetChannelRequest as GetChannelRequest, GetOrCreateChannelRequest as GetOrCreateChannelRequest, UpdateChannelRequest as UpdateChannelRequest
+from web_suck_it_py.request import CreateChannelRequest as CreateChannelRequest
+from web_suck_it_py.request import DeleteChannelRequest as DeleteChannelRequest
+from web_suck_it_py.request import GetChannelListRequest as GetChannelListRequest
+from web_suck_it_py.request import GetChannelRequest as GetChannelRequest
+from web_suck_it_py.request import (
+    GetOrCreateChannelRequest as GetOrCreateChannelRequest,
+)
+from web_suck_it_py.request import UpdateChannelRequest as UpdateChannelRequest
 from web_suck_it_py.response import Channel as Channel
 
 RESOURCE_NAME: str
