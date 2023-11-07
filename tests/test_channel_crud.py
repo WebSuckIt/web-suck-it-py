@@ -5,6 +5,7 @@ from tests.conftest import handler
 from web_suck_it_py import (
     CreateChannelRequest,
     DeleteChannelRequest,
+    GetChannelListRequest,
     GetChannelRequest,
     GetOrCreateChannelRequest,
 )
@@ -29,3 +30,13 @@ def test_create_and_delete_channel(handler):
     channel = handler.create_channel(CreateChannelRequest(channel=channel_name))
     assert channel.name == channel_name
     handler.delete_channel(DeleteChannelRequest(channel_id=channel.id))
+
+
+def test_get_channel_list(handler):
+    channel_list = handler.get_channels(
+        GetChannelListRequest(
+            page=0,
+            per_page=10,
+        )
+    )
+    assert len(channel_list) != 0
