@@ -95,7 +95,7 @@ class Metrics:
         Battery information
     """
 
-    __report: MetricsReport = MetricsReport(
+    report: MetricsReport = MetricsReport(
         cpu_usage=CpuUsage(usage=""),
         memory_usage=MemoryUsage(
             usage="",
@@ -287,7 +287,7 @@ class Metrics:
         """
         Return Report as a dictionary.
         """
-        dict_report = self.__report._asdict()
+        dict_report = self.report._asdict()
         return self.__parse_dict(dict_report)
 
     def tojson(self) -> str:
@@ -298,7 +298,7 @@ class Metrics:
 
     def __call__(self) -> MetricsReport:
         timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        self.__report = MetricsReport(
+        self.report = MetricsReport(
             cpu_usage=self.cpu_usage,
             memory_usage=self.memory_usage,
             disk_usage=self.disk_usage,
@@ -307,4 +307,4 @@ class Metrics:
             battery_info=self.battery_info,
             timestamp=timestamp,
         )
-        return self.__report
+        return self.report
