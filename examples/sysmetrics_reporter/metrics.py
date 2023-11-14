@@ -144,7 +144,7 @@ class Metrics:
             CpuUsage: CPU usage information
         """
         cpu_percent = psutil.cpu_percent(interval=1)
-        return CpuUsage(usage=f"{cpu_percent}%")  #  dict[str, str]
+        return CpuUsage(usage=f"{cpu_percent}%")  # dict[str, str]
 
     @property
     def memory_usage(self) -> MemoryUsage:
