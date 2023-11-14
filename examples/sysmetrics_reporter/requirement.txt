@@ -1,2 +1,3 @@
+psutil==5.9.6
 web-suck-it-py==0.0.1
 websocket-client==1.6.1
