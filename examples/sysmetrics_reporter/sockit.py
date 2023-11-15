@@ -1,12 +1,10 @@
-from typing import Optional, Any, Generator
+from typing import Any, Generator, Optional
 from uuid import UUID
-from websocket import create_connection
-from web_suck_it_py import (
-    WebSuckIt,
-    GetOrCreateChannelRequest,
-    Channel,
-)
+
 from config import Config, logging
+from websocket import create_connection
+
+from web_suck_it_py import Channel, GetOrCreateChannelRequest, WebSuckIt
 
 
 class Suckit:

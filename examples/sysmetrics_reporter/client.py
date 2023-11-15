@@ -1,9 +1,10 @@
-import pprint
-import json
 import argparse
+import json
+import pprint
 from typing import Optional
-from sockit import Suckit, standalone_receive
+
 from config import logging
+from sockit import Suckit, standalone_receive
 
 
 def main():

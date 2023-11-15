@@ -1,6 +1,7 @@
-from typing import Any, NamedTuple, Optional
 import datetime
 import json
+from typing import Any, NamedTuple, Optional
+
 import psutil
 
 
