@@ -4,7 +4,7 @@ This is a Python program that gathers system metrics and sends them as JSON payl
 
 ## Requirements
 
-Python 3.6 or higher is required to run this program.
+Python 3.7 or higher is required to run this program.
 
 ## Project Directory
 
@@ -18,7 +18,7 @@ The project directory contains the following files:
 
 ## Usage
 
-Install the required dependencies by running `pip install -r requirements.txt`.
+Install the required dependencies by running `poetry install`.
 
 ### Setting up the environment variables
 
