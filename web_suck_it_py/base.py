@@ -1,7 +1,7 @@
 import base64
 import json
 from dataclasses import dataclass
-from typing import Any, TypedDict, Union, Dict
+from typing import Any, Dict, TypedDict, Union
 from uuid import UUID
 
 import requests
@@ -9,8 +9,8 @@ from Crypto.Cipher import PKCS1_OAEP
 from Crypto.Hash import SHA256
 from Crypto.PublicKey import RSA
 
-from web_suck_it_py.error import InitializationError
 from web_suck_it_py.constants import HTTPMethod
+from web_suck_it_py.error import InitializationError
 from web_suck_it_py.types import NotRequired, Unpack
 
 
@@ -26,7 +26,7 @@ class Base:
 
     user_id: UUID
     access_key: Union[str, None] = None
-    public_key: Union[str , None] = None
+    public_key: Union[str, None] = None
     base_url: str = "https://backend.websuckit.com/api"
     wss_url: str = "wss://backend.websuckit.com"
 

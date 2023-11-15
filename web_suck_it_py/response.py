@@ -1,6 +1,6 @@
 from dataclasses import dataclass
-from uuid import UUID
 from typing import Union
+from uuid import UUID
 
 
 @dataclass
