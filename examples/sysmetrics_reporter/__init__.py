@@ -1,6 +1,6 @@
-from .sockit import Suckit, standalone_send, standalone_receive
-from .config import logging, Config
-from .metrics import Metrics
+from sysmetrics_reporter.sockit import Suckit, standalone_send, standalone_receive
+from sysmetrics_reporter.config import logging, Config
+from sysmetrics_reporter.metrics import Metrics
 
 SYS_METRICS = Metrics()
 WS_URI = Suckit().get_uri()
