@@ -14,7 +14,7 @@ classifiers = [
   "Topic :: Communications",
   "Topic :: Software Development :: Libraries :: Python Modules",
   "License :: OSI Approved :: MIT License",
-  "Programming Language :: Python :: 3.11"
+  "Programming Language :: Python :: 3.8 - 3.11"
 ]
 keywords = [
   "websocket", 
@@ -25,10 +25,11 @@ keywords = [
 ]
 
 [tool.poetry.dependencies]
-python = "^3.11"
+python = "^3.8.1"
 uuid = "^1.30"
 pycryptodome = "^3.19.0"
 requests = "^2.31.0"
+typing-extensions = "^4.8.0"
 
 [tool.mypy]
 mypy_path = "web_suck_it_py/stubs/web_suck_it_py"

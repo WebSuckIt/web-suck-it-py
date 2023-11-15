@@ -1,7 +1,7 @@
 from dataclasses import dataclass
-from http import HTTPMethod
 from typing import Any, List
 
+from web_suck_it_py.constants import HTTPMethod
 from web_suck_it_py.base import Base
 from web_suck_it_py.request import (
     CreateChannelRequest,

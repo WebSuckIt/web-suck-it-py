@@ -1,8 +1,7 @@
 import base64
 import json
 from dataclasses import dataclass
-from http import HTTPMethod
-from typing import Any, NotRequired, TypedDict, Unpack
+from typing import Any, TypedDict, Union, Dict
 from uuid import UUID
 
 import requests
@@ -11,6 +10,8 @@ from Crypto.Hash import SHA256
 from Crypto.PublicKey import RSA
 
 from web_suck_it_py.error import InitializationError
+from web_suck_it_py.constants import HTTPMethod
+from web_suck_it_py.types import NotRequired, Unpack
 
 
 class GetChannelURLArgs(TypedDict):
@@ -24,8 +25,8 @@ class Base:
     """Handler for making calls to websuckit platform"""
 
     user_id: UUID
-    access_key: str | None = None
-    public_key: str | None = None
+    access_key: Union[str, None] = None
+    public_key: Union[str , None] = None
     base_url: str = "https://backend.websuckit.com/api"
     wss_url: str = "wss://backend.websuckit.com"
 
@@ -49,8 +50,8 @@ class Base:
         self,
         endpoint: str,
         method: HTTPMethod,
-        payload: dict[str, Any] | None = None,
-        params: dict[str, Any] | None = None,
+        payload: Union[Dict[str, Any], None] = None,
+        params: Union[Dict[str, Any], None] = None,
     ) -> requests.Response:
         if self.access_key is None:
             raise InitializationError("access_key")
