@@ -1,14 +1,14 @@
 name: Test CI
 on:
   push:
-    branches: ["main"]
+    branches: ["main", "backwards_compatibility"]
 
 jobs:
   ci:
     strategy:
       fail-fast: false
       matrix:
-        python-version: ["3.11"]
+        python-version: ["3.11", "3.10", "3.9", "3.8", "3.7"]
         poetry-version: ["1.7.0"]
     runs-on: ubuntu-latest
     steps:
