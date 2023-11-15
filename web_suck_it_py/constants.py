@@ -1,4 +1,7 @@
-class HTTPMethod:
+from enum import Enum
+
+
+class HTTPMethod(str, Enum):
     """HTTP methods
 
     Methods from the following RFCs are all observed:

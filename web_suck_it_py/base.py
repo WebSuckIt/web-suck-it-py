@@ -11,7 +11,7 @@ from Crypto.PublicKey import RSA
 
 from web_suck_it_py.constants import HTTPMethod
 from web_suck_it_py.error import InitializationError
-from web_suck_it_py.types import NotRequired, Unpack
+from web_suck_it_py.versioned_types import NotRequired, Unpack
 
 
 class GetChannelURLArgs(TypedDict):

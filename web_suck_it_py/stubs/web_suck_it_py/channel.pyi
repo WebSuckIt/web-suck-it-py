@@ -1,6 +1,8 @@
+from dataclasses import dataclass
 from typing import List
 
 from web_suck_it_py.base import Base as Base
+from web_suck_it_py.constants import HTTPMethod as HTTPMethod
 from web_suck_it_py.request import CreateChannelRequest as CreateChannelRequest
 from web_suck_it_py.request import DeleteChannelRequest as DeleteChannelRequest
 from web_suck_it_py.request import GetChannelListRequest as GetChannelListRequest
@@ -13,6 +15,7 @@ from web_suck_it_py.response import Channel as Channel
 
 RESOURCE_NAME: str
 
+@dataclass
 class WebSuckIt(Base):
     def create_channel(self, params: CreateChannelRequest) -> Channel: ...
     def update_channel(self, params: UpdateChannelRequest) -> Channel: ...
