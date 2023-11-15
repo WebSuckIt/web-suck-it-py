@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "sysmetrics-reporter"
+version = "0.1.0"
+description = "This is a Python program that gathers system metrics and sends them as JSON payloads to clients over Websuckit."
+authors = ["Daniel Eje <ejedenials@gmail.com>"]
+readme = "README.md"
+packages = [{include = "sysmetrics_reporter"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+psutil = "5.9.6"
+web-suck-it-py = "0.0.1"
+websocket-client = "1.6.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
