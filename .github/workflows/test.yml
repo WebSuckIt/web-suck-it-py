@@ -1,7 +1,7 @@
 name: Test CI
 on:
   push:
-    branches: ["main", "backwards_compatibility"]
+    branches: ["main"]
 
 jobs:
   ci:
