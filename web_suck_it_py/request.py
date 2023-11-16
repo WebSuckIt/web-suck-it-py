@@ -1,11 +1,11 @@
 from dataclasses import asdict, dataclass
-from typing import Any
+from typing import Any, Dict, Union
 from uuid import UUID
 
 
 @dataclass
 class WebSuckItRequest:
-    def asdict(self) -> dict[str, Any]:
+    def asdict(self) -> Dict[str, Any]:
         return asdict(self)
 
 
@@ -22,7 +22,7 @@ class GetOrCreateChannelRequest(GetChannelRequest):
 @dataclass
 class CreateChannelRequest(WebSuckItRequest):
     channel: str
-    max_connections: int | None = None
+    max_connections: Union[int, None] = None
 
 
 @dataclass
@@ -33,12 +33,12 @@ class DeleteChannelRequest(WebSuckItRequest):
 @dataclass
 class UpdateChannelRequest(DeleteChannelRequest):
     regenerate_pass_key: bool
-    channel: str | None = None
-    max_connections: int | None = None
+    channel: Union[str, None] = None
+    max_connections: Union[int, None] = None
 
 
 @dataclass
 class GetChannelListRequest(WebSuckItRequest):
     page: int
     per_page: int
-    search_key: str | None = None
+    search_key: Union[str, None] = None
